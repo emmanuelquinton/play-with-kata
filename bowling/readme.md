@@ -19,3 +19,4 @@
       * add method and variable in Frame class
     * Update acceptance test adding case 9-
     * Add sum method in frame
+  * Update result method in Game and Execute acceptance test
