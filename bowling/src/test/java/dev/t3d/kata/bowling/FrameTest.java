@@ -34,4 +34,20 @@ public class FrameTest {
 
     }
 
+    @Test
+    void should_sum_frame_rolls() {
+        //given
+        var frame = new Frame(new RollValue(6));
+        frame.addSecondRollValue(new RollValue(3));
+
+        //when
+        int actualSum = frame.sum();
+
+
+        //then
+        Assertions.assertThat(actualSum)
+                .as("Check that the sum of rolls is 9")
+                .isEqualTo(9);
+    }
+
 }

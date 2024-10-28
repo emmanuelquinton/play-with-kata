@@ -20,4 +20,8 @@ public class Frame {
     public int getSecondRollValue() {
         return secondtRollValue.getValue();
     }
+
+    public int sum() {
+        return fisrtRollValue.getValue() + secondtRollValue.getValue();
+    }
 }

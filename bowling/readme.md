@@ -3,15 +3,19 @@
 ## process
 
 * create acceptance test
-    * create game result calculator class with method calculate to be agnostic of the code
+    * create GameAcceptenceTest
+      * Call result method
+      * 
     * this class will be refactorize at the end 
 * add code 
   * Game
-  * Adding frame to Game
+  * Adding frames to Game
   * Frame class
     * first trie roll in constructor
       * create constructor with Integer argument
       * add getFirstRollValue that return int
-      * refactorize creating RollValue object using DDD rull
-    * add second roll
-    * sum of frame
+      * refactorize creating RollValue object using DDD rules
+    * Add second roll value
+      * add method and variable in Frame class
+    * Update acceptance test adding case 9-
+    * Add sum method in frame
