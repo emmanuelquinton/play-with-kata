@@ -16,6 +16,7 @@ public class GameTest {
         //then
         Assertions.assertThat(game.getFrames())
                 .as("Check that the frame has been added")
-                .hasSize(1);
+                .extracting(FrameList::size)
+                .isEqualTo(1);
     }
 }

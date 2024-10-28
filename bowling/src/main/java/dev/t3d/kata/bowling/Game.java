@@ -5,21 +5,21 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Game {
-    private List<Frame> frames;
+    private FrameList frames;
 
     public Game() {
-        this.frames = new ArrayList<>();
+        this.frames = new FrameList();
     }
 
     public int result() {
-    return frames.stream().mapToInt(Frame::sum).sum();
+    return frames.result();
     }
 
     public void addFrame(Frame frame) {
         this.frames.add(frame);
     }
 
-    public List<Frame> getFrames() {
+    FrameList getFrames() {
         return this.frames;
     }
 

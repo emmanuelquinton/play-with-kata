@@ -20,3 +20,4 @@
     * Update acceptance test adding case 9-
     * Add sum method in frame
   * Update result method in Game and Execute acceptance test
+  * Apply Calisthenic rule 'Classes that encompass Collection'
