@@ -11,6 +11,7 @@ public class GamerResultAccepetanceTest {
         // given
         var gameResultCalulator = new GameResultCalulator();
         var game = new Game();
+
         // when
         var actualScore = gameResultCalulator.score(game);
 
