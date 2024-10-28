@@ -7,7 +7,7 @@ public class GameTest {
     @Test
     void should_frame_could_be_added_to_game() {
         //given
-        Frame frame = new Frame();
+        Frame frame = new Frame(9);
         var game = new Game();
 
         //when

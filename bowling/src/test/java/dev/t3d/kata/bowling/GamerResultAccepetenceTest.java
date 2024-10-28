@@ -7,7 +7,7 @@ public class GamerResultAccepetenceTest {
 
 
     @Test
-    void should_give_result_when_only_strikes() {
+    void should_give_result_when_no_strike_nor_spaire() {
         // given
         var gameResultCalulator = new GameResultCalulator();
         var game = new Game();
@@ -16,8 +16,8 @@ public class GamerResultAccepetenceTest {
 
         // then
         Assertions.assertThat(actualScore)
-                .as("Check that the score, when there are only strike is 300")
-                .isEqualTo(300);
+                .as("Check that the score, when there are 20 rolls 10 pairs of 9 and miss")
+                .isEqualTo(90);
     }
 
 
