@@ -8,7 +8,7 @@ public class FrameTest {
     @Test
     void should_create_frame_with_first_roll() {
         // given
-        var frame = new Frame(Integer.valueOf(9));
+        var frame = new Frame(new RollValue(9));
         //when
         int actualFirstRollValue = frame.getFirstRoll();
 

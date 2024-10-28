@@ -2,13 +2,13 @@ package dev.t3d.kata.bowling;
 
 public class Frame {
 
-    private final Integer value;
+    private final RollValue fisrtRollValue;
 
-    public Frame(Integer value) {
-        this.value = value;
+    public Frame(RollValue firstRollValue) {
+        this.fisrtRollValue = firstRollValue;
     }
 
     public int getFirstRoll() {
-        return this.value;
+        return this.fisrtRollValue.getValue();
     }
 }

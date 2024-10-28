@@ -3,7 +3,7 @@ package dev.t3d.kata.bowling;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class GamerResultAccepetenceTest {
+public class GamerResultAccepetanceTest {
 
 
     @Test

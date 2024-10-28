@@ -9,6 +9,9 @@
   * Game
   * Adding frame to Game
   * Frame class
-    * first trie roll in constructor ? 
+    * first trie roll in constructor
+      * create constructor with Integer argument
+      * add getFirstRollValue that return int
+      * refactorize creating RollValue object using DDD rull
     * add second roll
     * sum of frame
