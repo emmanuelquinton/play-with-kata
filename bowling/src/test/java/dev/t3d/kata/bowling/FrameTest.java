@@ -10,7 +10,7 @@ public class FrameTest {
         // given
         var frame = new Frame(new RollValue(9));
         //when
-        int actualFirstRollValue = frame.getFirstRoll();
+        int actualFirstRollValue = frame.getFirstRollValue();
 
         //then
         Assertions.assertThat(actualFirstRollValue)

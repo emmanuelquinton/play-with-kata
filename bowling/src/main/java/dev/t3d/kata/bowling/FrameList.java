@@ -12,7 +12,20 @@ public class FrameList {
     }
 
     public void add(Frame frame) {
-        this.frames.add(frame);
+        //Check if previous frame is a spare and if add the first roll value of the new frame as bonus spare to the pervious frame
+        addBonusValueToPreviousFrameIfSpare(frame);
+        if(this.frames.size() < 10 ) {
+            this.frames.add(frame);
+        }
+    }
+
+    private void addBonusValueToPreviousFrameIfSpare(Frame frame) {
+        if (frames.size() > 0) {
+            var previousFrame = this.frames.getLast();
+            if (previousFrame != null && previousFrame.isSpare()) {
+                previousFrame.addBonusSpareValue(new RollValue(frame.getFirstRollValue()));
+            }
+        }
     }
 
     public int size() {

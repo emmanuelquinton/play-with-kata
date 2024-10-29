@@ -12,7 +12,7 @@ public class Frame {
         this.fisrtRollValue = firstRollValue;
     }
 
-    public int getFirstRoll() {
+    public int getFirstRollValue() {
         return this.fisrtRollValue.getValue();
     }
 
