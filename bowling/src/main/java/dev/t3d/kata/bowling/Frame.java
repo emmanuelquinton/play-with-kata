@@ -6,6 +6,7 @@ public class Frame {
     private RollValue secondRollValue;
 
     private boolean isSpare;
+    private RollValue bonusSpareValue;
 
     public Frame(RollValue firstRollValue) {
         this.fisrtRollValue = firstRollValue;
@@ -32,10 +33,18 @@ public class Frame {
     }
 
     public int sum() {
-        return fisrtRollValue.getValue() + ((secondRollValue != null) ? secondRollValue.getValue() : 0);
+        var frameValue = fisrtRollValue.getValue() + ((secondRollValue != null) ? secondRollValue.getValue() : 0);
+        if(this.isSpare) {
+            return frameValue + this.bonusSpareValue.getValue();
+        }
+        return frameValue;
     }
 
     public boolean isSpare() {
         return this.isSpare;
+    }
+
+    public void addBonusSpareValue(RollValue bonusSpareValue) {
+        this.bonusSpareValue = bonusSpareValue;
     }
 }

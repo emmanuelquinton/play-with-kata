@@ -65,4 +65,20 @@ public class FrameTest {
                 .isTrue();
     }
 
+    @Test
+    void should_frame_sum_is_15_when_spare_and_bonus_ball_is_5() {
+        //given
+        var frame = new Frame(new RollValue(5));
+        frame.addSecondRollValue(new RollValue(5));
+        frame.addBonusSpareValue(new RollValue(5));
+
+        //when
+        var actualSum = frame.sum();
+
+        //then
+        Assertions.assertThat(actualSum)
+                .as("Check that the sum is 15")
+                .isEqualTo(15);
+    }
+
 }
