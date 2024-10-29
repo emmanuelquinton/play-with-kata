@@ -50,4 +50,19 @@ public class FrameTest {
                 .isEqualTo(9);
     }
 
+    @Test
+    void should_frame_is_spaire(){
+        //given
+        var frame = new Frame(new RollValue(5));
+        frame.addSecondRollValue(new RollValue(5));
+
+        //when
+        var actualIsSpareValue = frame.isSpare();
+
+        //then
+        Assertions.assertThat(actualIsSpareValue)
+                .as("Check that the frame is a spare")
+                .isTrue();
+    }
+
 }
