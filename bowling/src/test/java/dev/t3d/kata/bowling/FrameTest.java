@@ -81,4 +81,20 @@ public class FrameTest {
                 .isEqualTo(15);
     }
 
+
+    @Test
+    void should_frame_is_strike(){
+        //given
+        var frame = new Frame(new RollValue(10));
+
+
+        //when
+        var actualIsSpareValue = frame.isStrike();
+
+        //then
+        Assertions.assertThat(actualIsSpareValue)
+                .as("Check that the frame is a strike")
+                .isTrue();
+    }
+
 }

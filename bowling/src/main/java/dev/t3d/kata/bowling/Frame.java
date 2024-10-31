@@ -3,6 +3,7 @@ package dev.t3d.kata.bowling;
 public class Frame {
 
     private final RollValue fisrtRollValue;
+        private  boolean isStrike;
     private RollValue secondRollValue;
 
     private boolean isSpare;
@@ -10,6 +11,7 @@ public class Frame {
 
     public Frame(RollValue firstRollValue) {
         this.fisrtRollValue = firstRollValue;
+        this.isStrike = (this.fisrtRollValue.getValue() == 10);
     }
 
     public int getFirstRollValue() {
@@ -46,5 +48,10 @@ public class Frame {
 
     public void addBonusSpareValue(RollValue bonusSpareValue) {
         this.bonusSpareValue = bonusSpareValue;
+    }
+
+
+    public boolean isStrike() {
+        return this.isStrike;
     }
 }
