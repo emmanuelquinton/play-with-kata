@@ -11,6 +11,10 @@ public class Frame {
 
     public Frame(RollValue firstRollValue) {
         this.fisrtRollValue = firstRollValue;
+        defineIfisStrike();
+    }
+
+    private void defineIfisStrike() {
         this.isStrike = (this.fisrtRollValue.getValue() == 10);
     }
 
