@@ -97,4 +97,20 @@ public class FrameTest {
                 .isTrue();
     }
 
+    @Test
+    void should_frame_sum_is_30_when_3_strikes() {
+        //given
+        var frame = new Frame(new RollValue(10));
+        frame.addBonusStrikesValue(10);
+        frame.addBonusStrikesValue(10);
+
+        //when
+        var actualSum = frame.sum();
+
+        //then
+        Assertions.assertThat(actualSum)
+                .as("Check that the sum is 15")
+                .isEqualTo(30);
+    }
+
 }

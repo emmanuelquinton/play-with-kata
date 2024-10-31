@@ -48,16 +48,16 @@ public class GameAcceptanceTest {
     }
 
     @Test
-    void should_give_result_when_only_strikes() {
+    void
+    should_give_result_when_only_strikes() {
         // given
         var game = new Game();
 
-        for(int rollIndex = 0; rollIndex <10; rollIndex++) {
+        for(int rollIndex = 0; rollIndex <12; rollIndex++) {
             var frame = new Frame(new RollValue(10));
             game.addFrame(frame);
         }
 
-        game.addFrame( new Frame(new RollValue(5)));
         // when
         var actualScore = game.result();
 

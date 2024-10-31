@@ -8,6 +8,9 @@ public class Frame {
 
     private boolean isSpare;
     private RollValue bonusSpareValue;
+    private RollValue bonusStrikeValue;
+
+
 
     public Frame(RollValue firstRollValue) {
         this.fisrtRollValue = firstRollValue;
@@ -43,6 +46,9 @@ public class Frame {
         if(this.isSpare) {
             return frameValue + this.bonusSpareValue.getValue();
         }
+        if(this.isStrike && this.bonusStrikeValue != null ) {
+            return frameValue + this.bonusStrikeValue.getValue();
+        }
         return frameValue;
     }
 
@@ -57,5 +63,15 @@ public class Frame {
 
     public boolean isStrike() {
         return this.isStrike;
+    }
+
+    public void addBonusStrikesValue(int sum) {
+
+        if(bonusStrikeValue != null) {
+             sum = this.bonusStrikeValue.getValue() + sum;
+        }
+
+        this.bonusStrikeValue = new RollValue(sum);
+
     }
 }

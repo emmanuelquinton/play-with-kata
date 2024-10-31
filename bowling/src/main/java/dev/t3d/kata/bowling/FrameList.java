@@ -14,6 +14,25 @@ public class FrameList {
     public void add(Frame frame) {
         //Check if previous frame is a spare and if add the first roll value of the new frame as bonus spare to the pervious frame
         addBonusValueToPreviousFrameIfSpare(frame);
+
+        //
+        if(frames.size()>0) {
+            var previousFrame = this.frames.getLast();
+            if (previousFrame != null && previousFrame.isStrike()) {
+
+            previousFrame.addBonusStrikesValue(frame.sum());
+            }
+            if(frames.size()>2) {
+                var previouPreviousFrame = this.frames.get(this.frames.size() - 2);
+                if (previouPreviousFrame != null && previouPreviousFrame.isStrike()) {
+                    previouPreviousFrame.addBonusStrikesValue(frame.sum());
+                }
+            }
+        }
+
+        //
+
+
         if(this.frames.size() < 10 ) {
             this.frames.add(frame);
         }
